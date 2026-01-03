@@ -25,3 +25,4 @@ const Admindashboard=()=>{
         </div>
     )
 }
+export default Admindashboard
