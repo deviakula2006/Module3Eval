@@ -7,7 +7,7 @@ export const AuthProvider=({children})=>{
     );
     const login =(role)=>{
         costdata={role};
-        localStorage.setItem("user",JSON.stringyfy(data));
+        localStorage.setItem("user",JSON.stringify(data));
         setUser(data);
     }
     const logout=()=>{
