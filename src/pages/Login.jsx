@@ -24,8 +24,8 @@ const Login =()=>{
             <h2>
                 Login
             </h2>
-            <input placeholder="Email"  type="text" name="email" onChange={(e)=>setEmail(e.target.value)}/>
-             <input placeholder="password" type="text" name="password" onChange={(e)=>setEmail(e.target.value)}/>
+            <input placeholder="Email"  type="text" name="email" onChange={e=>setEmail(e.target.value)}/>
+             <input placeholder="password" type="text" name="password" onChange={e=>setEmail(e.target.value)}/>
             <button onClick={handleLogin}>
                 Login
             </button>
