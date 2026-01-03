@@ -2,17 +2,22 @@ import {useEffect,useState} from "react"
 import { getRestaurant,saveRestaurants } from "../datautility/storage"
 import ReastaurantCard from "../components/ReastaurantCard"
 import {useNavigate} from "react-router-dom"
+import Navbar from "../components/Navbar"
 const Admindashboard=()=>{
     const [list,setList]=useState([]);
     const navigate=useNavigate();
     useEffect(()=>{
-        setList(getRestaurant)=(id)=>{
+        setList(getRestaurants())},[])
+
+       
+     const deleteRestaurant=(id)=>{
             const updated=list.filter(r=>r.restaurantID!==id)
+            setList(updated)
             saveRestaurants(updated)
         }
-    })
     return(
         <div>
+            <Navbar/>
             <h2>Admin dashboard</h2>
             {list.length===0 && <p>No Restarants</p>}
             {list.map(r=>(
